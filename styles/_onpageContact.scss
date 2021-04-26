@@ -1,0 +1,45 @@
+.onpage_contact {
+  padding: 1rem;
+
+  form > input,
+  form > textarea {
+    margin-bottom: 1rem;
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+    border-radius: 8px;
+    border: 1px solid #303030;
+  }
+
+  &__form {
+    width: 80%;
+    @include md-mobile {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    &__header {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    input[type="submit"] {
+      background-color: $primaryColor;
+      color: #fff;
+      width: 30em;
+      height: 4em;
+      margin: 1rem auto;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.25s;
+
+      @include md-mobile {
+        width: 100%;
+      }
+    }
+
+    input[type="submit"]:hover {
+      background-color: $secondaryColor;
+      transform: scale(0.9);
+    }
+  }
+}

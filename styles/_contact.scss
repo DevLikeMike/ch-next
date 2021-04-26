@@ -1,0 +1,92 @@
+.map {
+  margin-top: $defaulHeight;
+}
+
+.contact {
+  padding: 1rem $navMargin;
+
+  &__header {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__subHeader {
+    line-height: 1.8rem;
+    letter-spacing: normal;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #303030;
+    margin-top: 1rem;
+  }
+
+  &__container {
+    @include lg-mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    flex: 2.5;
+    &__header {
+      margin: 1rem;
+    }
+
+    input,
+    textarea {
+      margin-bottom: 1rem;
+      padding: 0.5em 1em;
+      font-size: 0.9em;
+      border-radius: 8px;
+      border: 1px solid #303030;
+    }
+
+    textarea {
+      min-height: 7rem;
+    }
+
+    input[type="submit"] {
+      background-color: #f50202;
+      color: #fff;
+      padding: 1em;
+      width: 15em;
+      font-weight: 700;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #43b600;
+    }
+  }
+
+  &__card {
+    flex: 1;
+    padding: 0.5em;
+    margin: 1rem 0 0 2rem;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    height: 40%;
+    background-color: #fff;
+    box-shadow: 0 0 15px 5px rgba($color: #303030, $alpha: 0.2);
+
+    @include lg-mobile {
+      margin: 1rem auto;
+    }
+
+    .card__phone {
+      color: $primaryColor;
+
+      i {
+        margin-right: 0.5em;
+        color: #333;
+      }
+    }
+  }
+
+  &__card > * {
+    margin-bottom: 1rem;
+  }
+}

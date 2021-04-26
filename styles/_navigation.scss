@@ -1,0 +1,207 @@
+nav {
+  padding: 0 1rem;
+  height: $defaulHeight;
+  max-height: $defaulHeight;
+  width: 100vw;
+  background-color: #fff;
+  color: #333;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px rgba(31, 31, 31, 0.3) solid;
+  z-index: 200;
+  justify-content: space-between;
+  flex-direction: row;
+  box-shadow: 0 3px 3px rgba(31, 31, 31, 0.3);
+
+  .logo__container {
+    max-height: $defaulHeight;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition: 0.2s;
+
+    .logo {
+      height: $defaulHeight;
+      width: 10rem;
+      background: url("../public/images/icons8-kentucky-96.png") no-repeat
+        center;
+    }
+  }
+
+  .logo__container:hover {
+    color: $primaryColor;
+  }
+
+  .main-navigation {
+    max-width: 50%;
+
+    .nav-item {
+      margin-right: 3rem;
+      position: relative;
+      height: $defaulHeight;
+      font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include lg-mobile {
+        display: none;
+      }
+    }
+
+    .nav-item:nth-last-of-type(1) {
+      margin-right: 0;
+    }
+
+    .nav-item > i {
+      margin-left: 1rem;
+    }
+
+    .nav-item:hover > ul {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .drop-down-menu {
+      position: absolute;
+      top: $defaulHeight;
+      left: -2rem;
+      min-width: 200px;
+      transition: 0.5s;
+      background-color: #ffffff;
+      color: #000;
+      opacity: 0;
+      border: 1px solid rgba(31, 31, 31, 0.3);
+      border-radius: 8px;
+      pointer-events: none;
+      font-size: 0.875rem;
+    }
+
+    .drop-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+    }
+
+    .drop-item a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding: 1rem;
+    }
+
+    .drop-item a:hover {
+      background-color: #d1d1d1;
+    }
+  }
+
+  .hamburger-container {
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    margin: 0.75rem 1rem;
+    cursor: pointer;
+    display: none;
+    z-index: 200;
+
+    @include lg-mobile {
+      display: block;
+    }
+
+    span {
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      left: 0;
+      opacity: 1;
+      z-index: 1;
+      color: black;
+      background-color: #333333;
+      border-radius: 9px;
+      transform: rotate(0deg);
+      transition: 0.24s ease-in-out;
+    }
+
+    span:nth-child(1) {
+      top: 0;
+      transform-origin: center;
+    }
+
+    span:nth-child(2) {
+      top: 33%;
+    }
+
+    span:nth-child(3) {
+      top: 66%;
+      transform-origin: center;
+    }
+  }
+
+  .hamburger-container.open span {
+    background-color: #fff;
+  }
+
+  .hamburger-container.open span:nth-child(1) {
+    top: 1rem;
+    transform: rotate(405deg);
+    left: 0px;
+    transition: 0.24s;
+  }
+
+  .hamburger-container.open span:nth-child(2) {
+    transform: rotateX(190deg);
+    transform: translatex(-100px);
+    opacity: 0;
+  }
+
+  .hamburger-container.open span:nth-child(3) {
+    transform: rotate(-405deg);
+    top: 1rem;
+  }
+
+  .sideNav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(31, 31, 31, 0.8);
+    color: #fff;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .sideNav-item {
+      margin: 1rem 0;
+      font-size: 1.4rem;
+    }
+  }
+
+  .sideNav.open {
+    left: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(60, 60, 60);
+  color: #fff;
+  padding: 1rem 3rem;
+
+  p {
+    font-size: 0.85em;
+  }
+
+  a {
+    color: rgb(94, 163, 228);
+  }
+
+  a:hover {
+    color: #000;
+  }
+}
+
+footer .container > * {
+  margin: 0.5em 0;
+}

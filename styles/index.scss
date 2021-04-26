@@ -1,0 +1,29 @@
+@import "./globals";
+@import "./navigation";
+@import "./homescreen";
+@import "./contact";
+@import "./onpageContact";
+@import "./mvh";
+
+@media (max-width: 450px) {
+  .intro {
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+
+  .intro .contact-us {
+    width: 100%;
+  }
+
+  .card-container .card {
+    display: block;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card:nth-child(even) img {
+    margin-left: 0rem;
+  }
+}

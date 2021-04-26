@@ -1,0 +1,50 @@
+.aop-page {
+  margin-top: $defaulHeight;
+
+  .content {
+    padding: 0 3rem;
+  }
+
+  h3,
+  p,
+  h1,
+  ul,
+  hr {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    color: $primaryColor;
+    font-size: 1.85rem;
+  }
+
+  li {
+    list-style: outside;
+    margin-left: 3rem;
+    margin-top: 0.25em;
+    max-width: 35rem;
+  }
+
+  .title {
+    color: #333;
+    margin: 1rem 0 0;
+    font-size: 2.2rem;
+  }
+
+  .hero {
+    height: 75vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 60%;
+    margin-top: var(--defaultHeight);
+    background-attachment: fixed;
+  }
+  .hero.mvh {
+    background-image: url("../public/images/vehicleaccident.jpg");
+  }
+
+  .hero.saf {
+    background-image: url("../public/images/slipfall.jpg");
+  }
+}

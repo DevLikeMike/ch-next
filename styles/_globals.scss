@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400&display=swap");
+
+$defaulHeight: 6vh;
+$navMargin: 5vw;
+$primaryColor: #0033a0;
+$secondaryColor: #0041ce;
+$offWhite: #eeeeee;
+$lg-mobile: 900px;
+$md-mobile: 715px;
+$sm-mobile: 500px;
+$sm-desktop: 1020px;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html,
+textarea {
+  font-family: "Poppins", sans-serif;
+  font-size: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.ai-fe {
+  align-items: flex-end;
+}
+
+.ai-fs {
+  align-items: flex-start;
+}
+
+.jc-fe {
+  justify-content: flex-end;
+}
+
+.jc-fs {
+  justify-content: flex-start;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.blue {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+@mixin lg-mobile {
+  @media (max-width: #{$lg-mobile}) {
+    @content;
+  }
+}
+@mixin md-mobile {
+  @media (max-width: #{$md-mobile}) {
+    @content;
+  }
+}
+@mixin sm-mobile {
+  @media (max-width: #{$sm-mobile}) {
+    @content;
+  }
+}
+@mixin sm-desktop {
+  @media (max-width: #{$sm-desktop}) {
+    @content;
+  }
+}
